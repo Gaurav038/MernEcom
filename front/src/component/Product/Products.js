@@ -11,8 +11,8 @@ import { useAlert } from "react-alert";
 import Typography from "@material-ui/core/Typography";
 
 const categories = [
-    "laptop",
-    "Footwear",
+    "Laptop",
+    "Cricket",
     "Bottom",
     "Tops",
     "Attire",

@@ -19,13 +19,13 @@ const MyOrders = () => {
   const { user } = useSelector((state) => state.user);
 
   const columns = [
-    { field: "id", headerName: "Order ID", minWidth: 300, flex: 1 },
+    { field: "id", headerName: "Order ID", minWidth: 400},
 
     {
       field: "status",
       headerName: "Status",
-      minWidth: 150,
-      flex: 0.5,
+      minWidth: 250,
+      // flex: 0.5,
       cellClassName: (params) => {
         return params.getValue(params.id, "status") === "Delivered"
           ? "greenColor"
@@ -37,20 +37,20 @@ const MyOrders = () => {
       headerName: "Items Qty",
       type: "number",
       minWidth: 150,
-      flex: 0.3,
+      // flex: 0.3,
     },
 
     {
       field: "amount",
       headerName: "Amount",
       type: "number",
-      minWidth: 270,
-      flex: 0.5,
+      minWidth: 230,
+      // flex: 0.5,
     },
 
     {
       field: "actions",
-      flex: 0.3,
+      // flex: 0.3,
       headerName: "Actions",
       minWidth: 150,
       type: "number",

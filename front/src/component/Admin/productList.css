@@ -1,5 +1,5 @@
 .productListContainer {
-    width: 80%;
+    width: 100%;
     box-sizing: border-box;
     background-color: rgb(255, 255, 255);
     border-left: 1px solid rgba(0, 0, 0, 0.158);
@@ -21,6 +21,7 @@
   .productListTable {
     background-color: white;
     border: none !important;
+    width: 90%;
   }
   
   .productListTable div {
@@ -52,3 +53,6 @@
       font: 300 4vw "Roboto";
     }
   }
+  /* footer {
+    display: none;
+  } */

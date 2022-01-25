@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Link} from "react-router-dom";
+import img from "../../../images/club22.png"
 
 const Navbar = () => {
   return (
@@ -7,7 +8,7 @@ const Navbar = () => {
       <Content>
         <Logo>
           <Link to="/">
-            <img src="" alt="" />
+            <img src={img} alt="" />
           </Link>
         </Logo>
        
@@ -15,35 +16,35 @@ const Navbar = () => {
           <NavListWrap>
             <NavList className="active">
               <Link to="/">
-              <i class="fas fa-home fa-2x"></i>
+              <i className="fas fa-home fa-2x"></i>
                 <span>Home</span>
               </Link>
             </NavList>
 
             <NavList>
               <Link to="/products">
-                <i class="fas fa-home fa-2x"></i>
+                <i className="fas fa-home fa-2x"></i>
                 <span>Products</span>
               </Link>
             </NavList>
 
             <NavList>
               <Link to="/contact">
-              <i class="fas fa-home fa-2x"></i>
+              <i className="fas fa-home fa-2x"></i>
                 <span>Contact</span>
               </Link>
             </NavList>
 
             <NavList>
               <Link to="/about">
-              <i class="fas fa-home fa-2x"></i>
+              <i className="fas fa-home fa-2x"></i>
                 <span>About</span>
               </Link>
             </NavList>
 
             <NavList>
               <Link to="/login">
-              <i class="fas fa-home fa-2x"></i>
+              <i className="fas fa-home fa-2x"></i>
                 <span>Login</span>
               </Link>
             </NavList>
@@ -77,7 +78,7 @@ const Content = styled.div`
 const Logo = styled.span`
   margin-right: 8px;
   img{
-      width:21rem;
+      width:17rem;
   }
 `;
 
