@@ -1,6 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
-import Carousel from "react-material-ui-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 import "./ProductDetails.css";
+import "./carousel.css"
 import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layout/Loader/Loader";
 import MetaData from "../layout/MetaData";
@@ -104,7 +106,7 @@ return (
           <MetaData title={`${product.name} -- ECOMMERCE`} />
           <div className="ProductDetails">
             <div>
-              <Carousel>
+              <Carousel infiniteLoop autoPlay>
                 {product.images &&
                   product.images.map((item, i) => (
                     <img

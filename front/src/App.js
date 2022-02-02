@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import './App.css'
-import Header from "./component/layout/Header/Header.js"
+import Header from "./component/layout/Headersss/Header.jsx"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import WebFont from "webfontloader"
 import Footer from './component/layout/Footer/Footer'
@@ -16,7 +16,6 @@ import axios from 'axios';
 import {Elements} from "@stripe/react-stripe-js"
 import {loadStripe} from "@stripe/stripe-js"
 
-import UserOptions from "./component/layout/Header/UserOptions.js"
 import Profile from "./component/User/Profile"
 import ProtectedRoute from './component/Route/ProtectedRoute';
 import UpdateProfile from "./component/User/UpdateProfile.js"
@@ -42,6 +41,7 @@ import ProductReviews from './component/Admin/ProductReviews';
 import About from './component/layout/About/About';
 import Contact from './component/layout/Contact/Contact';
 import NotFound from './component/layout/NotFound/NotFound';
+import CustomButtons from './component/layout/Headersss/CustomButtons';
 
 
 export default function App() {
@@ -71,7 +71,6 @@ export default function App() {
     return (
         <Router>   
                 <Header />
-                {isAuthenticated && <UserOptions user={user} />}
 
                 {stripeApiKey && <Elements stripe={loadStripe(stripeApiKey)} >
                   <ProtectedRoute exact path="/process/payment" component={Payment} />
@@ -107,9 +106,9 @@ export default function App() {
                 <ProtectedRoute isAdmin={true} exact path="/admin/users" component={UsersList} />
                 <ProtectedRoute isAdmin={true} exact path="/admin/user/:id" component={UpdateUser} />
                 <ProtectedRoute isAdmin={true} exact path="/admin/reviews" component={ProductReviews} />
-                {/* <Route component={
+                <Route component={
                   window.location.pathname === "/process/payment" ? null : NotFound
-                } /> */}
+                } />
 
                 </Switch> 
                 <Footer />   
