@@ -8,7 +8,6 @@ import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layout/Loader/Loader";
 import { Box, makeStyles, Typography } from "@material-ui/core";
 import { useAlert } from "react-alert";
-import NavbarOther from "./NavbarOther";
 
 const navData = [
   
@@ -82,7 +81,7 @@ const Home = () => {
       alert.error(error);
       dispatch(clearErrors());
     }
-    dispatch(getProduct(category));
+    dispatch(getProduct("", 1, [0, 250000], category, 0));
   }, [dispatch, category, error, alert]);
 
   return (
@@ -96,7 +95,7 @@ const Home = () => {
           <Box className={classes.component} >
             {navData.map((temp) => (
               <Box key={temp.url} className={classes.container} onClick={()=>setCategory(temp.text)}>
-                <img src={temp.url} className={classes.image} />
+                <img src={temp.url} alt="img" className={classes.image} />
                 <Typography className={classes.text}>{temp.text}</Typography>
               </Box>
             ))}

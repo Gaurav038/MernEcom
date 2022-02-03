@@ -41,11 +41,9 @@ import ProductReviews from './component/Admin/ProductReviews';
 import About from './component/layout/About/About';
 import Contact from './component/layout/Contact/Contact';
 import NotFound from './component/layout/NotFound/NotFound';
-import CustomButtons from './component/layout/Headersss/CustomButtons';
 
 
 export default function App() {
-  const {isAuthenticated, user} = useSelector((state) => state.user)
 
   const [stripeApiKey, setStripeApiKey] = useState("")
 
@@ -106,9 +104,7 @@ export default function App() {
                 <ProtectedRoute isAdmin={true} exact path="/admin/users" component={UsersList} />
                 <ProtectedRoute isAdmin={true} exact path="/admin/user/:id" component={UpdateUser} />
                 <ProtectedRoute isAdmin={true} exact path="/admin/reviews" component={ProductReviews} />
-                <Route component={
-                  window.location.pathname === "/process/payment" ? null : NotFound
-                } />
+                
 
                 </Switch> 
                 <Footer />   

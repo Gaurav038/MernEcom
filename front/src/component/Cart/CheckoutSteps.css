@@ -11,3 +11,7 @@
   .MuiStepConnector-completed {
     background-color: tomato;
   }
+  .MuiStepper-root {
+    display: flex;
+    margin-top: 4rem!important;
+}

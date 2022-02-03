@@ -39,7 +39,7 @@ const Shipping = ({ history }) => {
   };
 
   return (
-    <Fragment>
+    <Fragment style={{topMargin: '5rem'}}>
       <MetaData title="Shipping Details" />
       <CheckoutSteps activeStep={0} />
 

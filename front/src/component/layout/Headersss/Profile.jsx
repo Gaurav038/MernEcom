@@ -59,10 +59,10 @@ const Profile = ({ user }) => {
 
     return (
         <>
-            <Link onClick={handleClick} className={classes.container}> 
+            <div onClick={handleClick} className={classes.container}> 
                 <Typography style={{ marginTop: 2 }}>{user.name}</Typography>
                 <ArrowDropDownIcon />
-            </Link>
+            </div>
             <Menu
                 anchorEl={open}
                 open={Boolean(open)}

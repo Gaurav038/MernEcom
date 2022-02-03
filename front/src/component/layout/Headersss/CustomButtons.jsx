@@ -88,10 +88,10 @@ const CustomButtons = () => {
                 <Typography style={{ marginLeft: 10 }}>Product</Typography>
             </Link>
             <div>
-                <Link onClick={handleClick} style={{textDecoration:'none', color: 'white'}} className={classes.container} >
+                <div onClick={handleClick} style={{textDecoration:'none', color: 'white'}} className={classes.container} >
                     <Typography style={{ marginTop: 2 }}>More</Typography>
                     <ArrowDropDownIcon />
-                </Link>
+                </div>
                 <Menu
                     anchorEl={open}
                     open={Boolean(open)}
@@ -116,7 +116,6 @@ const CustomButtons = () => {
                 </Badge>
                 <Typography style={{ marginLeft: 10 }}>Cart</Typography>
             </Link>
-            {/* <LoginDialog open={open} setOpen={setOpen} setAccount={setAccount} /> */}
         </Box>
     )
 }
