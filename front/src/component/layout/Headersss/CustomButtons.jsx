@@ -80,7 +80,7 @@ const CustomButtons = () => {
             {
                 user ? <Profile user={user} /> :
                     <Link to="/login">
-                        <Button className={classes.login} variant="contained" onClick={() => openDialog()}>Login</Button>
+                        <Button className={classes.login} variant="contained">Login</Button>
                     </Link>
 
             }
